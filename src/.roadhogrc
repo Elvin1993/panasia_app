@@ -1,0 +1,21 @@
+{
+  "entry": "src/index.js",
+  "publicPath": "static/",
+  "outputPath": "../www/static",
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime"
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  },
+  "extraBabelPlugins": [
+      ["import", { "libraryName": "antd-mobile", "style": "css" }]
+    ]
+}
