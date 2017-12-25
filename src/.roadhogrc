@@ -2,6 +2,11 @@
   "entry": "src/index.js",
   "publicPath": "./",
   "outputPath": "../www",
+  "autoprefixer": {
+    "browsers": [
+      "iOS >= 8", "Android >= 4"
+    ]
+  },
   "env": {
     "development": {
       "extraBabelPlugins": [
