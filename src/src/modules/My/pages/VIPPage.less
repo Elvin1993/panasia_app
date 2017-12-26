@@ -1,0 +1,124 @@
+@import "../../../styles/_var";
+
+.vip_page {
+  //margin-top: 86px;
+  flex: 1;
+  //display: flex;
+  overflow: scroll;
+  //flex-direction: column;
+  .top {
+    height: 164px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .user_face {
+      margin: 0 38px;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      width: 118px;
+      height: 118px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 118px;
+        max-height: 118px
+      }
+    }
+
+    .user_info {
+      flex: 1;
+      font-size: 32px;
+      line-height: 1.5;
+      color: #fff;
+      .msg {
+        color: #999;
+        font-size: 28px;
+      }
+      .vip_msg {
+        color: #dab176;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .vip_list {
+    background-color: #fff;
+    padding: 0 38px;
+    margin: 30px 0;
+    li {
+      height: 88px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 28px;
+      line-height: 32px;
+      color: #000;
+      .vip_name {
+        flex: 1;
+        padding: 0 18px;
+      }
+      .price {
+        color: #ff6600;
+        margin: 0 20px;
+      }
+
+      button {
+        margin: 0;
+        border-radius: 6px;
+        background-color: rgb(255, 102, 0);
+        border-color: rgb(255, 102, 0);
+        color: #fff;
+        //width: 92px;
+        height: 52px;
+        font-size: 28px;
+        line-height: 32px;
+        outline: none;
+        -webkit-appearance: none; // 去除ios默认样式
+      }
+    }
+  }
+
+  .footer {
+    background-color: #fff;
+    padding: 0 38px;
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1;
+      padding: 28px 0;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .vip_info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        width: 50%;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .right {
+          flex: 1;
+          padding-left: 18px;
+          h3 {
+            color: #000;
+            font-size: 28px;
+            line-height: 1.5;
+          }
+          span {
+            font-size: 26px;
+            line-height: 32px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+

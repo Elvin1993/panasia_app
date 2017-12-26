@@ -1,0 +1,211 @@
+@import "./_var";
+
+:global {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: 'PingFangSC-Light', "Microsoft YaHei", "微软雅黑", sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    
+    background-color: #f4f4f4;
+    color: @gray;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  * {
+    //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    //-webkit-touch-callout: none;
+  }
+
+  a,
+  input,
+  textarea,
+  button,
+  select {
+    outline: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*公共样式*/
+
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td,
+  img,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  fieldset,
+  img {
+    border: 0
+  }
+
+  address,
+  caption,
+  cite,
+  code,
+  dfn,
+  em,
+  strong,
+  th,
+  var {
+    font-style: normal;
+    font-weight: normal
+  }
+
+  ol,
+  ul {
+    list-style: none
+  }
+
+  caption,
+  th {
+    text-align: left
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal
+  }
+
+  q:before,
+  q:after {
+    content: ''
+  }
+
+  abbr,
+  acronym {
+    border: 0
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .text-blue {
+    color: #3d74c7 !important;
+  }
+
+  .text-green {
+    color: #49B18F !important;
+  }
+
+  .text-red {
+    color: #D95C57 !important;
+  }
+
+  .text-gray {
+    color: #ccc !important;
+  }
+
+  .bg-blue {
+    background-color: #4775cc !important;
+  }
+
+  .bg-green {
+    background-color: #49b18f !important;
+  }
+
+  .bg-red {
+    background-color: #d95c57 !important;
+  }
+
+  .page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //background: #fff;
+  }
+
+  fieldset[disabled] input, input[readonly], textarea, textarea:disabled {
+    color: #000 !important;
+    opacity: 1;
+  }
+
+  #root, .app, .page {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+}

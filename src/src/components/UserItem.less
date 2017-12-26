@@ -1,0 +1,86 @@
+@import "../styles/_var";
+
+.user_item {
+  min-height: 138px;
+  box-sizing: border-box;
+  border-bottom: 1px solid @border-color;
+  padding: 10px 37px;
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  &:first-child {
+    border-top: 1px solid @border-color;
+  }
+  &:nth-of-type(even) {
+    background: #fff;
+  }
+
+  .btn_select {
+    margin: 20px 20px 20px 0;
+    width: 31px;
+    height: 31px;
+    .rc-checkbox-inner {
+      width: 31px;
+      height: 31px;
+      &:after {
+        left: 15px;
+      }
+    }
+  }
+
+  .user_face {
+    border-radius: 12px;
+    background-color: rgb(78, 131, 237);
+    width: 102px;
+    height: 102px;
+    //margin-top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      width: 102px;
+      height: 102px;
+    }
+  }
+  .user_info {
+    margin-left: 19px;
+    flex: 1;
+    align-self: flex-start;
+    font-size: 28px;
+    .top {
+      display: flex;
+      flex-direction: row;
+      align-content: flex-end;
+      justify-content: space-between;
+      .name {
+        font-size: 38px;
+        color: rgb(0, 0, 0);
+        line-height: 1.2;
+        //margin-top: 18px;
+      }
+      .bussiness_card {
+        z-index: 21;
+        width: 81px;
+        height: 48px;
+        align-self: flex-start;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 81px;
+          height: 48px;
+        }
+      }
+    }
+    .job_level {
+      //font-size: 24px;
+      //color: rgb(102, 102, 102);
+      //line-height: 1.2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -5,7 +5,6 @@
   "description": "panasia barcode app",
   "main": "index.js",
   "scripts": {
-    "install": "npm install && cd src && npm install",
     "start": "cd src && npm run start",
     "build-www": "cd src && npm run build",
     "build-android": "npm run build-www && cordova build android",
@@ -13,7 +12,8 @@
     "android": "npm run build-www && cordova run android",
     "save-platform": "cordova platform save",
     "prepare-platform": "cordova prepare",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "commit-wizard"
   },
   "author": "panasia",
   "license": "Apache-2.0",
@@ -28,5 +28,15 @@
     "platforms": [
       "android"
     ]
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": [],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
   }
 }

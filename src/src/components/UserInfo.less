@@ -1,0 +1,64 @@
+@import '../styles/_var';
+
+.user_info_wrapper {
+
+  .user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 10px 0 110px;
+    .row {
+      font-size: 0.32rem;
+      padding: 15px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+      label {
+        width: 100px;
+        &:after {
+          content: ':';
+        }
+      }
+      span {
+        flex: 1;
+        color: #000;
+      }
+      a {
+        color: @blue;
+      }
+      .tel_msg {
+        color: @blue;
+        font-size: 32px;
+        line-height: 72.67px;
+      }
+    }
+  }
+
+  .bussiness_card {
+    width: 526px;
+    height: 317px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px auto;
+    border: 1px solid @border-color;
+    background-color: #fff;
+    img {
+      max-width: 526px;
+      max-height: 317px;
+    }
+    &.bussiness_card_false {
+      background-image: url("assets/bussiness_card_false.png");
+      background-size: 526px 317px;
+      margin-top: 57px;
+      button {
+        flex: inherit;
+        width: 300px;
+        height: 93px;
+      }
+    }
+
+  }
+}

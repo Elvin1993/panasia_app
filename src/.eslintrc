@@ -13,6 +13,19 @@
     "space-before-function-paren": 0,
     "padded-blocks": 0
   },
+  "globals": {
+    "ENV": true,
+    "__DEV__": true,
+    "__PROD__": true,
+    "__BRANCH__": true,
+    "__DATETIME__": true,
+    "autobind": true,
+    "connect": true,
+    "React": true,
+    "routerRedux": true,
+    "Config": true,
+    "API": true,
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
