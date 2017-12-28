@@ -50,18 +50,6 @@ module.exports = function (webpackConfig, env) {
 
   // 对roadhog默认配置进行操作，比如：
   Object.assign(webpackConfig, {
-    // entry: {
-    //   app: 'src/index.js',
-    //   // vendor: ['moment', 'redux-form', 'redux-saga', 'react-router', 'dva'],
-    // },
-    // output: {
-    //   path: path.join(__dirname, '../www'),
-    //   // filename: '[name].js',
-    //   // filename: __DEV__ ? '[name].js' : '[name].[hash:5].js',
-    //   // chunkFilename: __DEV__ ? '[name].js' : '[name].[hash:5].js',
-    //   publicPath:'./'
-    //   // CDNBase: __PROD__ ? '//m-ztrust-com.oss-cn-hangzhou.aliyuncs.com/' : ''
-    // },
     node: {
       fs: 'empty'
     },

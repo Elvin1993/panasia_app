@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-framework="react">
+<html lang="zh-CN" data-framework="react" data-scale="true">
 <head>
   <meta charset="utf-8">
   <title>{%=__TITLE__%}Pansia</title>

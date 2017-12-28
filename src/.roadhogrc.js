@@ -26,20 +26,14 @@ export default {
   'svgSpriteLoaderDirs': svgSpriteDirs,
   'extraPostCSSPlugins': [
     pxtorem({
-      rootValue: 100,
+      rootValue: 100 ,
       propWhiteList: [],
       selectorBlackList: [/^html$/, /^\.ant-/, /^\.github-/, /^\.gh-/],
     })
   ],
-  // 'theme': {
-  //   '@fill-body': '#1DA57A',
-  //   "@primary-color": "#1DA57A",
-  //   "@link-color": "#1DA57A",
-  //   "@border-radius-base": "2px",
-  //   "@font-size-base": "16px",
-  //   "@line-height-base": "1.2"
-  // },
-  // // 'theme': null,
+  "theme": {
+    "@hd": "2px"
+  },
   // 'proxy': {
   //   '/api': {
   //     'target': 'http://jsonplaceholder.typicode.com/',
@@ -65,31 +59,29 @@ export default {
     'transform-runtime',
     'transform-decorators-legacy',
     'add-module-exports',
-    ['import', [{'libraryName': 'antd-mobile', 'style': 'css'}, {'libraryName': 'react-router', 'camel2DashComponentName': false}]]
+    ['import', [{'libraryName': 'antd-mobile', 'style': 'css'}, {
+      'libraryName': 'react-router',
+      'camel2DashComponentName': false
+    }]]
   ],
   'env': {
-    'development': {
-      'extraBabelPlugins': [
-        'dva-hmr'
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        ['import', {'libraryName': 'antd-mobile', 'libraryDirectory': 'lib', 'style': true}]
       ]
     },
-    'production': {
-      'extraBabelPlugins': []
-    },
-    'autoprefixer': {
-      'browsers': [
-        'iOS >= 8', 'Android >= 4'
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime",
+        ['import', {'libraryName': 'antd-mobile', 'libraryDirectory': 'lib', 'style': true}]
       ]
-    },
+    }
   },
-  // dllPlugin: {
-  //   'exclude': [
-  //     'babel-runtime'
-  //   ],
-  //   'include': [
-  //     'dva/router',
-  //     'dva/saga',
-  //     'dva/fetch'
-  //   ]
-  // }
+  'autoprefixer': {
+    'browsers': [
+      'iOS >= 8', 'Android >= 4'
+    ]
+  }
 }
