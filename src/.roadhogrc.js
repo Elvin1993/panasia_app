@@ -59,7 +59,7 @@ export default {
     'transform-runtime',
     'transform-decorators-legacy',
     'add-module-exports',
-    ['import', [{'libraryName': 'antd-mobile', 'style': 'css'}, {
+    ['import', [{'libraryName': 'antd-mobile', 'style': true}, {
       'libraryName': 'react-router',
       'camel2DashComponentName': false
     }]]
