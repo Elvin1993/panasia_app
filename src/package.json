@@ -73,6 +73,7 @@
     "postcss": "^5.2.16",
     "postcss-pxtorem": "^4.0.0",
     "pre-git": "^3.14.0",
+    "precommit-hook": "^3.0.0",
     "precss": "^1.4.0",
     "react-async-component": "^1.0.0-alpha.1",
     "react-loadable": "^3.0.1",
@@ -89,5 +90,10 @@
   },
   "release": {
     "analyzeCommits": "simple-commit-message"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
