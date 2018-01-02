@@ -24,16 +24,14 @@ export default {
   "outputPath": "../www",
   'multipage': false,
   'svgSpriteLoaderDirs': svgSpriteDirs,
-  'extraPostCSSPlugins': [
-    pxtorem({
-      rootValue: 100 ,
-      propWhiteList: [],
-      selectorBlackList: [/^html$/, /^\.ant-/, /^\.github-/, /^\.gh-/],
-    })
-  ],
-  "theme": {
-    "@hd": "2px"
-  },
+  // 'extraPostCSSPlugins': [
+  //   pxtorem({
+  //     rootValue: 100,
+  //     propWhiteList: [],
+  //     selectorBlackList: [/^html$/, /^\.ant-/, /^\.github-/, /^\.gh-/],
+  //   })
+  // ],
+  "theme": "./theme.config.js",
   // 'proxy': {
   //   '/api': {
   //     'target': 'http://jsonplaceholder.typicode.com/',
@@ -69,13 +67,13 @@ export default {
       "extraBabelPlugins": [
         "dva-hmr",
         "transform-runtime",
-        ['import', {'libraryName': 'antd-mobile', 'libraryDirectory': 'lib', 'style': true}]
+        ['import', {'libraryName': 'antd-mobile', 'style': true}]
       ]
     },
     "production": {
       "extraBabelPlugins": [
         "transform-runtime",
-        ['import', {'libraryName': 'antd-mobile', 'libraryDirectory': 'lib', 'style': true}]
+        ['import', {'libraryName': 'antd-mobile', 'style': true}]
       ]
     }
   },

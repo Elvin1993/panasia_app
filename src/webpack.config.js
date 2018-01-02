@@ -87,14 +87,14 @@ module.exports = function (webpackConfig, env) {
 
   // webpackConfig.babel.babelrc = true
 
-  webpackConfig.postcss = () => {
-    return [
-      pxtorem({
-        rootValue: 100,
-        propWhiteList: [],
-        selectorBlackList: [/^html$/, /^\.ant-/, /^\.github-/, /^\.gh-/],
-      })]
-  }
+  // webpackConfig.postcss = () => {
+  //   return [
+  //     pxtorem({
+  //       rootValue: 12,
+  //       propWhiteList: [],
+  //       selectorBlackList: [/^html$/, /^\.ant-/, /^\.github-/, /^\.gh-/],
+  //     })]
+  // }
 
   if (__DEV__) {
     webpackConfig.plugins.push(new DashboardPlugin({port: 3013}))
@@ -109,7 +109,7 @@ module.exports = function (webpackConfig, env) {
   }
 
   if (__TEST__ || __PROD__) {
-    webpackConfig.plugins[3] = new ExtractTextPlugin('[name].[chunkhash:5].css')
+    // webpackConfig.plugins[3] = new ExtractTextPlugin('[name].[chunkhash:5].css')
   }
 
   /*
