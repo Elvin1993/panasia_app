@@ -1,0 +1,76 @@
+@import "../../../styles/_var";
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  .back {
+    width: 50px;
+    height: 70px;
+  }
+  .top_tab_bar {
+    flex: 1;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+    color: @gray;
+    overflow: hidden;
+
+    li {
+      width: 166px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      border-bottom: 5px solid #fff;
+      box-sizing: border-box;
+      &.activity {
+        border-color: @blue;
+      }
+      &.disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  margin-top: 45%;
+  justify-content: center;
+  font-size: 0.32rem;
+  color: #999;
+  text-align: center;
+
+}
+
+//.activity_detail_layout {
+//  box-sizing: border-box;
+//  flex: 1;
+//  overflow: scroll;
+//  .detail_content {
+//    flex: 1;
+//    overflow-y: scroll;
+//    background-color: #fff;
+//    display: flex;
+//    flex-direction: column;
+//    //margin-top: 86px;
+//  }
+//
+//  .empty {
+//    flex: 1;
+//    display: flex;
+//    margin-top: 45%;
+//    justify-content: center;
+//    font-size: 0.32rem;
+//    color: #999;
+//    text-align: center;
+//
+//  }
+//}

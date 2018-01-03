@@ -1,0 +1,44 @@
+@import "../../../styles/_var";
+
+.list_page {
+  //margin-top: 86px;
+  padding-bottom: 40px;
+  flex: 1;
+  overflow-y: scroll;
+  .item {
+    margin: 0 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 310px;
+    //width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 42px;
+    img {
+      width: 100%;
+    }
+    .name_mask {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .name {
+        display: inline-block;
+        border: 4px solid rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        font-size: 32px;
+        line-height: 32px;
+        padding: 24px 32px;
+      }
+
+    }
+
+  }
+}

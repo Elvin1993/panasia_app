@@ -1,17 +1,43 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "standard",
-    "standard-jsx"
-  ],
+  "extends": ["standard", "standard-jsx"],
+  "ecmaFeatures": {
+    "jsx": true,
+    "es6": true,
+    "modules": true,
+    "classes": true
+  },
   "env": {
     "browser": true,
     "node": true
   },
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
+  ],
   "rules": {
     "semi": 0,
-    "space-before-function-paren": 0,
-    "padded-blocks": 0
+    "no-console": 0,
+    "no-useless-escape": 0,
+    "no-unused-vars": 0,
+    "camelcase": 0,
+    "no-useless-constructor": 0,
+    "eqeqeq": 1
+  },
+  "globals": {
+    "ENV": true,
+    "__DEV__": true,
+    "__PROD__": true,
+    "__BRANCH__": true,
+    "__DATETIME__": true,
+    "autobind": true,
+    "connect": true,
+    "React": true,
+    "routerRedux": true,
+    "Config": true,
+    "API": true,
+    "wx": true,
   },
   "parserOptions": {
     "ecmaFeatures": {

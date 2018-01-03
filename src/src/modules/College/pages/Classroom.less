@@ -1,0 +1,102 @@
+.classroom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  .header {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .live-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+  // .question-list {
+  //   overflow: auto;
+  //   flex: 1;
+  // }
+  .input-container {
+    display: flex;
+    padding: .15rem .3rem;
+  }
+
+  .mask {
+    padding: 0.3rem;
+    background: rgb(255, 255, 255);
+    z-index: 9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: .7rem;
+    box-sizing: border-box;
+  }
+  .mask-placeholder {
+    height: .3rem;
+    background: #f2f6f9;
+    margin-bottom: .2rem;
+  }
+
+  .empty-hint {
+    margin-top: 0.6rem;
+    font-size: 0.32rem;
+    color: #999;
+    text-align: center;
+  }
+}
+
+.tab_box {
+  flex:1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  :global{
+    .am-tabs-content {
+      flex: 1;
+    }
+    .am-tabs-tabpane {
+      // overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.video-list {
+  min-height: 100%;
+  background: #fff;
+  font-size: .32rem;
+}
+
+.video-item {
+  line-height: 1.5;
+  padding: .2rem .3rem;
+  border-bottom: 0.02rem solid #eee;
+  &.active {
+    background: #ebf0f6;
+    color: #3d74c7;
+  }
+  :global {
+    .am-icon-video_play {
+      display: inline-block;
+      vertical-align: middle;
+      width: .3rem;
+      height: .3rem;
+    }
+  }
+  .video-item-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .15rem;
+  }
+}

@@ -1,0 +1,325 @@
+@import "../../../styles/_var";
+
+.course_detail_page {
+  //flex: 1;
+  //display: flex;
+  //flex-direction: column;
+  //margin-top: 86px;
+  //padding-bottom: 98px;
+  background-color: #fff;
+
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 30px;
+    color: #333;
+    background: #f6f6f6;
+    //border-bottom: 1px solid #f6f6f6;
+  }
+
+  .video_list {
+    font-size: 28px;
+    line-height: 32px;
+    li {
+      padding: 0 15px 0 30px;
+      min-height: 98px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      color: #666;
+      &:active {
+        background: #ebf0f6;
+        font-weight: bold;
+      }
+      &.visible {
+        * {
+          color: #ccc;
+        }
+        &:active {
+          background: #fff;
+        }
+      }
+      &.playing {
+        color: #3d74c7;
+        background: #ebf0f6;
+      }
+    }
+    .name_box {
+      flex: 1;
+      box-sizing: border-box;
+      font-weight: 300;
+      //overflow: hidden;
+      //text-overflow: ellipsis;
+      //display: block;
+      //white-space: nowrap;
+      display: flex;
+      flex-direction: row;
+      .icon {
+        vertical-align: bottom;
+        margin-right: 10px;
+        width: 32px;
+        height: 32px;
+
+      }
+      .name {
+        flex: 1;
+      }
+    }
+
+    .right {
+      min-width: 90px;
+    }
+    .time, .look {
+      font-size: 24px;
+      line-height: 32px;
+      color: #999;
+    }
+
+    .icon_clock {
+      vertical-align: baseline;
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+
+    }
+    .time {
+      margin-right: 10px;
+    }
+    .look, .preview {
+      color: @blue !important;
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+
+    }
+    .preview {
+      font-size: 24px;
+      line-height: 32px;
+      border: 1px solid @blue;
+      border-radius: 3px;
+      padding: 2px;
+    }
+  }
+
+  .video {
+    height: 420px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    //background-size: cover;
+    background-size: 100% 100%;
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .icon {
+      width: 150px;
+      height: 150px;
+    }
+    video {
+      object-fit: fill; //解决上下黑边的问题
+      //-webkit-transform: translate3d(0,0,0);
+    }
+    //:global {
+    //  .video-react {
+    //    font-size: 21px;
+    //  }
+    //}
+  }
+
+  //:global {
+  //  .am-tabs.am-tabs-top {
+  //    flex: 1;
+  //    display: flex;
+  //    flex-direction: column;
+  //    .am-tabs-bar {
+  //      height: 87px;
+  //      display: -webkit-box;
+  //
+  //    }
+  //    .am-tabs-content {
+  //      flex: 1;
+  //    }
+  //  }
+  //
+  //}
+  video {
+    object-fit: fill; //解决上下黑边的问题
+    //-webkit-transform: translate3d(0,0,0);
+  }
+
+  .video_wrapper {
+    padding-top: 56.25%;
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    display: block;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #fff;
+    position: relative;
+    font-size: 50px;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .video_paly_button {
+      width: 120px;
+      height: 120px;
+      display: block;
+      position: absolute;
+      padding: 0;
+      cursor: pointer;
+      opacity: 1;
+      border: 0.06666em solid #fff;
+      background-color: #2B333F;
+      background-color: rgba(43, 51, 63, 0.7);
+      border-radius: 50%;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      top: 50%;
+      left: 50%;
+      margin-top: -60px;
+      margin-left: -60px;
+      pointer-events: none;
+      img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+    }
+
+  }
+  .teacher_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 30px 0;
+    .face {
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #fff;
+      width: 100px;
+      height: 100px;
+      margin-right: 32px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .info {
+      flex: 1;
+      font-size: 28px;
+      h3 {
+        color: #333;
+        //margin-bottom: 15px;
+        font-size: 32px;
+      }
+
+      //p {
+      //  font-size: 24px;
+      //  line-height: 38px;
+      //  color: #666666;
+      //}
+    }
+
+  }
+
+  .lecturer_full_desc {
+    padding: 15px 30px 30px;
+    font-size: 28px;
+  }
+  .des {
+    padding: 30px;
+    font-size: 28px;
+    line-height: 50px;
+    color: #333;
+
+  }
+  .footer {
+    height: 98px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 28px;
+    line-height: 32px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .price {
+      font-size: 38px;
+      width: 280px;
+      height: 98px;
+      line-height: 98px;
+      text-align: center;
+      color: #ff5000;
+      border-top: 1px solid #cccccc;
+      box-sizing: border-box;
+    }
+    .btn_learn {
+      background-color: #3d74c7;
+      color: #fff;
+      border: 0;
+      flex: 1;
+      height: 98px;
+      line-height: 98px;
+      border-radius: 0;
+    }
+
+  }
+
+  .tab {
+    border-top: 1px solid @border-color;
+  }
+
+  //.info_box {
+  //  flex: 1;
+  //  display: flex;
+  //  flex-direction: column;
+  //}
+
+}
+
+.sold_off_msg {
+  flex: 1;
+  padding-top: 150px;
+  font-size: 32px;
+  color: @gray-light;
+  text-align: center;
+}
+
+.hide {
+  height: 0;
+  transition: 0.5s 0.5s all ease;
+  border-bottom: 0;
+}
+
+.show {
+  height: 70px;
+  transition: 0.5s 0.5s all ease;
+
+}

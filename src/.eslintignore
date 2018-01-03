@@ -2,4 +2,5 @@ webpack.*
 server.js
 dist
 node_modules/
+pingpp.js
 index.tpl

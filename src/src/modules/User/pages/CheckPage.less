@@ -1,0 +1,95 @@
+@import '../../../styles/_var';
+
+.check_page {
+  //margin-top: 80px;
+  background-color: #fff;
+  flex: 1;
+  padding: 0 0.4rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  .face_box {
+    width: 100%;
+    height: 249px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .user_face {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 149px;
+    height: 149px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 149px;
+      max-height: 150px
+    }
+  }
+
+  .userInfo {
+    height: 168px;
+    //background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 80px;
+
+    .name {
+      font-size: 42px;
+      line-height: 1;
+      margin-top: 20px;
+    }
+    .dep {
+      font-size: 32px;
+      line-height: 2;
+    }
+
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 25px;
+      font-size: 0.32rem;
+      padding: 0 15px;
+      line-height: 1.2;
+      border-radius: 5px;
+      border: 1px solid rgb(204, 204, 204);
+      box-sizing: border-box;
+      appearance: button;
+      -moz-appearance: button; /* Firefox */
+      -webkit-appearance: button; /* Safari 和 Chrome */
+    }
+    a[role="button"] {
+      width: 100%;
+      height: 94px;
+      line-height: 94px;
+      margin-top: 39px;
+    }
+  }
+
+  .job_level {
+    //font-size: 24px;
+    //color: rgb(102, 102, 102);
+    margin-top: 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

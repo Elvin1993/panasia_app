@@ -1,0 +1,41 @@
+@import '../../../styles/_var';
+
+.pay_result_page {
+  font-size: 28px;
+  .order_info {
+    padding: 20px 30px;
+    margin: 20px 0;
+    background: #fff;
+    color: #333;
+    li {
+      display: flex;
+      flex-direction: row;
+      font-size: 28px;
+      margin-bottom: 15px;
+      .label {
+        flex-basis: 20%;
+        &:after {
+          content: ':'
+        }
+      }
+      .text {
+        flex: 1;
+      }
+      .multi_text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    .btn_goBack {
+      color: #3d74c7;
+      font-size: 32px;
+      text-decoration: underline;
+    }
+  }
+}

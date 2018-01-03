@@ -1,0 +1,102 @@
+@import "../../../styles/_var";
+
+.book_order_page {
+  overflow: hidden;
+  .price {
+    color: #ff6400;
+  }
+
+  .book_info {
+    margin-bottom: 40px;
+    padding: 30px 24px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    .left {
+      width: 184px;
+      height: 184px;
+      border: 1px solid @border-color;
+      overflow: hidden;
+      margin-right: 26px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .book_name {
+        font-size: 32px;
+        line-height: 1;
+        color: initial;
+      }
+      .right_bottom {
+        font-size: 26px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .count {
+          color: #3d4245;
+        }
+      }
+    }
+  }
+
+  .result_list {
+    :global {
+      .am-list-header {
+        color: #999999;
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .am-list-content, .am-list-extra {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      .am-list-extra {
+        color: #666;
+      }
+    }
+  }
+
+  .footer {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .sum {
+      text-align: right;
+      flex: 1;
+      padding-right: 32px;
+    }
+
+    .pay_button {
+      border: 0;
+      font-size: 28px;
+      border-radius: 0;
+      height: 96px;
+      line-height: 96px;
+      flex-basis: 30%;
+      color: #fff;
+      background-color: #ff6400;
+    }
+  }
+
+  .temp {
+    height: 100px;
+  }
+}
