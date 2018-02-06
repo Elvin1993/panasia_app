@@ -19,6 +19,7 @@ function RouterConfig(props) {
   // onEnter={checkLogin}
   return (
     <Router history={history}>
+      <Route path='/login' component={App.pages.LoginPage} />
       <Redirect from='/' to='/my' />
       <Route path='/' component={App.pages.Layout}>
         {My.route(app)}

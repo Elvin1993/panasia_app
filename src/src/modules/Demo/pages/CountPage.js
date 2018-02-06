@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'dva'
-import Spinner from 'components/Spinner'
 import styles from './CountPage.less'
 
 @connect(state => ({
@@ -17,7 +16,6 @@ export default class CountPage extends Component {
     const {loading, count, dispatch} = this.props
     return (
       <div className={styles.normal}>
-        <Spinner loading={loading} mask />
         <div className={styles.record}>Highest Record: {count.record}</div>
         <div className={styles.current}>{count.current}</div>
         <div className={styles.button}>

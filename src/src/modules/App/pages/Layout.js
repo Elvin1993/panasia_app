@@ -1,20 +1,20 @@
 import React from 'react'
-import {connect} from 'dva'
-import Spinner from 'components/Spinner'
+import { connect } from 'dva'
+
 @connect(state => ({
   // isCheck: state.my.myInfoModel.isCheck,
   loading: state.loading.global
 }))
 @autobind
 export default class AppLayout extends React.Component {
-  constructor(props) {
-    super(props)
-    // const {dispatch} = props
-    // dispatch({type: 'my/fetchUserInfo'})
-  }
+  // constructor (props) {
+  //   super(props)
+  //   // const {dispatch} = props
+  //   // dispatch({type: 'my/fetchUserInfo'})
+  // }
 
-  render() {
-    const {children, isCheck} = this.props
+  render () {
+    const {children} = this.props
     return (
       <div className='app'>
         {children}
